@@ -277,15 +277,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* Privacy and support pages */
 .legal-topbar { margin-bottom: 24px; }
+.legal-nav { display: flex; align-items: center; gap: 18px; font-size: 0.72rem; }
+.legal-nav a { color: var(--text-soft); }
+.legal-nav a:hover { color: var(--gold); }
 .button-ghost { background: transparent; border-color: var(--border); color: var(--text); }
 .legal-page { width: min(820px, calc(100vw - 48px)); margin: 0 auto; padding: 72px 0 100px; }
 .legal-page h1 { margin-bottom: 24px; font-size: clamp(3.2rem, 7vw, 5.8rem); }
 .legal-page > p { max-width: 700px; }
 .legal-page section { margin-top: 24px; padding: 28px 30px; border: 1px solid var(--border); border-radius: 16px; background: rgba(31, 14, 37, 0.7); }
 .legal-page h2 { margin: 0 0 14px; font-size: 1.65rem; }
-.legal-page section p { margin: 0; }
+.legal-page section p { margin: 0 0 14px; }
+.legal-page section p:last-child { margin-bottom: 0; }
 .legal-page ul { margin: 0; padding-left: 20px; }
 .legal-page li { margin-bottom: 8px; }
+.legal-page strong { color: var(--text); }
+.legal-action { padding-top: 8px; }
 
 .desktop-only { display: inline-flex; }
 
