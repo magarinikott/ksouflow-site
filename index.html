@@ -16,13 +16,17 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ksouflow.tech/" />
     <meta name="theme-color" content="#140919" />
+    <link rel="canonical" href="https://ksouflow.tech/" />
+    <link rel="alternate" hreflang="ru" href="https://ksouflow.tech/" />
+    <link rel="alternate" hreflang="en" href="https://ksouflow.tech/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://ksouflow.tech/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260823-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260823-2" />
   </head>
   <body>
     <div class="site-shell">
@@ -33,7 +37,10 @@
           <a href="#features">возможности</a>
           <a href="#faq">вопросы</a>
         </nav>
-        <a class="nav-action desktop-only" href="./support.html">поддержка</a>
+        <div class="header-actions">
+          <a class="language-link" href="./index-en.html" lang="en" aria-label="English version">EN</a>
+          <a class="nav-action desktop-only" href="./support.html">поддержка</a>
+        </div>
       </header>
 
       <main>
@@ -187,8 +194,16 @@
             <details>
               <summary>как хранятся мои расклады?</summary>
               <p>
-                история доступна только внутри вашего аккаунта. Подробнее — в
+                доступ к истории защищён авторизацией. Для создания и хранения
+                раскладов мы используем сервисных провайдеров. Подробнее — в
                 <a href="./privacy.html">политике конфиденциальности</a>.
+              </p>
+            </details>
+            <details>
+              <summary>можно ли полагаться на KSOU FLOW в важных решениях?</summary>
+              <p>
+                нет. KSOU FLOW — инструмент для рефлексии, а не замена медицинской,
+                психологической, юридической или финансовой помощи. Решения остаются за вами.
               </p>
             </details>
           </div>
@@ -198,7 +213,7 @@
           <div class="launch-symbol" aria-hidden="true">✦</div>
           <p class="eyebrow">KSOU FLOW</p>
           <h2>скоро в вашем телефоне</h2>
-          <p>готовим приложение к запуску на Android и iOS.</p>
+          <p>сначала запускаем Android-версию. iOS появится позже.</p>
           <a class="button" href="mailto:hello@ksouflow.tech?subject=KSOU%20FLOW%20—%20запуск">узнать о запуске</a>
         </section>
       </main>
@@ -210,6 +225,7 @@
           <a href="./privacy.html">конфиденциальность</a>
           <a href="./delete-account.html">удаление аккаунта</a>
           <a href="./support.html">поддержка</a>
+          <a href="./index-en.html" lang="en">English</a>
         </div>
       </footer>
     </div>
