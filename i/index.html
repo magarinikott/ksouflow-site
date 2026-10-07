@@ -6,6 +6,9 @@
     <meta name="theme-color" content="#100d20" />
     <title>приглашение в KSOU FLOW</title>
     <meta name="description" content="Приглашение в KSOU FLOW по личному коду." />
+    <meta property="og:title" content="тебя пригласили в KSOU FLOW" />
+    <meta property="og:description" content="Открой приложение и получи 3 дополнительных вопроса по коду подруги." />
+    <meta property="og:image" content="https://ksouflow.tech/og-image.png" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <style>
       * { box-sizing: border-box; }
@@ -27,6 +30,7 @@
       <p id="intro">открой приложение и получи 3 дополнительных вопроса по коду подруги.</p>
       <div class="code" id="code" hidden></div>
       <a class="action" id="open-app" href="../">на главную</a>
+      <p class="hint" id="install-hint">если приложение ещё не установлено, сохрани код: его можно ввести при регистрации или в профиле.</p>
       <p class="hint" id="hint">код можно применить в течение 72 часов после регистрации, до первой оплаты.</p>
     </main>
     <script>
@@ -39,6 +43,7 @@
         appLink.textContent = 'открыть приложение';
       } else {
         document.getElementById('intro').textContent = 'в ссылке нет действительного кода приглашения. попроси подругу отправить ссылку ещё раз.';
+        document.getElementById('install-hint').hidden = true;
         document.getElementById('hint').hidden = true;
       }
     </script>
