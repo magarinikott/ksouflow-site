@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100d20" />
+    <title>приглашение в KSOU FLOW</title>
+    <meta name="description" content="Приглашение в KSOU FLOW по личному коду." />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; color: #f5e9dd; font: 16px/1.5 system-ui, sans-serif; background: radial-gradient(circle at top, #241c3d, #100d20 58%, #090814); }
+      main { width: min(100%, 440px); padding: 30px 26px; border: 1px solid rgba(233,201,171,.18); border-radius: 24px; background: rgba(28,22,49,.9); }
+      .brand { color: #e7c7a6; font: 600 32px/1.1 Georgia, serif; letter-spacing: .04em; }
+      h1 { margin: 24px 0 12px; font-size: 26px; line-height: 1.2; }
+      p { margin: 0 0 16px; color: #cdbcb2; }
+      .code { margin: 24px 0 16px; padding: 12px; border: 1px solid rgba(232,185,82,.5); border-radius: 14px; color: #e8b952; font-size: 22px; font-weight: 700; letter-spacing: .12em; text-align: center; }
+      .action { display: block; padding: 14px 18px; border-radius: 14px; background: #b07ae8; color: #160d26; text-align: center; text-decoration: none; font-weight: 700; }
+      .hint { margin: 18px 0 0; font-size: 13px; }
+      a:not(.action) { color: #e7c7a6; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">KSOU FLOW</div>
+      <h1>тебя пригласили ✦</h1>
+      <p id="intro">открой приложение и получи 3 дополнительных вопроса по коду подруги.</p>
+      <div class="code" id="code" hidden></div>
+      <a class="action" id="open-app" href="../">на главную</a>
+      <p class="hint" id="hint">код можно применить в течение 72 часов после регистрации, до первой оплаты.</p>
+    </main>
+    <script>
+      const code = new URLSearchParams(location.search).get('ref')?.trim().toUpperCase() || '';
+      if (/^[A-Z0-9_-]{4,32}$/.test(code)) {
+        document.getElementById('code').textContent = code;
+        document.getElementById('code').hidden = false;
+        const appLink = document.getElementById('open-app');
+        appLink.href = `zvezdysadyskazali://invite?ref=${encodeURIComponent(code)}`;
+        appLink.textContent = 'открыть приложение';
+      } else {
+        document.getElementById('intro').textContent = 'в ссылке нет действительного кода приглашения. попроси подругу отправить ссылку ещё раз.';
+        document.getElementById('hint').hidden = true;
+      }
+    </script>
+  </body>
+</html>
