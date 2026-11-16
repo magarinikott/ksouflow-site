@@ -25,7 +25,7 @@
         </nav>
       </header>
       <main class="legal-page">
-        <p class="eyebrow">updated: September 29, 2026</p>
+        <p class="eyebrow">version: November 16, 2026</p>
         <h1>privacy policy</h1>
         <p>
           this policy explains how the KSOU FLOW app collects, uses, stores, and
@@ -33,75 +33,83 @@
           <strong>Individual Entrepreneur Ksenia Andreevna Soboleva</strong>,
           TIN 183208350170, OGRNIP 326169000229833. Privacy contact: <a href="mailto:hello@ksouflow.tech">hello@ksouflow.tech</a>.
         </p>
+        <p>
+          The app is currently in closed testing. Purchases, deletion of accounts with
+          purchases, and automatic cleanup of inactive accounts and support requests
+          are not enabled yet. The sections below describe the rules for these
+          features in the first public version. For now, you can delete an unpaid test
+          account in the app; for other data or support-mail deletion requests, contact
+          <a href="mailto:hello@ksouflow.tech">hello@ksouflow.tech</a>.
+        </p>
 
         <section>
           <h2>nature of the service</h2>
           <p>
             KSOU FLOW is an entertainment app offering symbolic Lenormand readings.
-            Interpretations are provided for entertainment and informational purposes;
-            they are not predictions, professional advice, or instructions for action.
+            Interpretations are for entertainment and information, not reliable predictions,
+            professional advice, or instructions for action.
           </p>
         </section>
 
         <section>
           <h2>data we process</h2>
           <ul>
-            <li>email address, account identifier, and session data used for registration, sign-in, and account recovery;</li>
-            <li>name, birth date and time, birth city, and current city, only when provided voluntarily;</li>
-            <li>question text, selected cards, interpretations, follow-up questions, and reading history;</li>
-            <li>support requests and information included in them;</li>
-            <li>technical request, error, app-version, and device information required for security and diagnostics.</li>
+            <li>email address, optional display name, account ID, protected sign-in data and sessions;</li>
+            <li>question text, reading type, cards, interpretations, recommendations, daily card and saved history;</li>
+            <li>subscription, purchase and refund records, question balance, promotion and referral awards;</li>
+            <li>support requests, reply address and correspondence;</li>
+            <li>IP address, request times, and technical request and error data needed for security and diagnostics.</li>
           </ul>
         </section>
 
         <section>
           <h2>how we use data</h2>
           <ul>
-            <li>to create and maintain your account;</li>
-            <li>to generate readings and answers;</li>
-            <li>to save your history and settings;</li>
-            <li>to provide support, prevent abuse, and fix errors;</li>
-            <li>to protect the security and stability of the service.</li>
+            <li>to register, sign in, restore and protect your account; the display name is optional and editable;</li>
+            <li>to generate readings, the daily card and history, and provide paid features;</li>
+            <li>to verify purchases and refunds and prevent duplicate bonus awards;</li>
+            <li>to reply to support requests, prevent abuse and fix errors.</li>
           </ul>
+          <p>The first version does not request birth date, birth time or cities. Please do not enter identity documents, health or intimate information, or other people's personal data in a question. We do not sell data or use advertising IDs. Processing supports the service and user agreement, legal obligations, and separate consent when required by law.</p>
         </section>
 
         <section>
           <h2>service providers</h2>
           <ul>
-            <li><strong>Supabase</strong> provides authentication, database, and storage services;</li>
-            <li><strong>Cloudflare Workers</strong> processes server requests and helps protect the service;</li>
-            <li><strong>DeepSeek</strong> and, in some configurations, <strong>OpenAI</strong> generate written interpretations. The question text, selected cards, and context required to produce an answer may be sent to these providers;</li>
-            <li><strong>Email providers</strong> process the sender address, subject, message text, and user-provided attachments when support is contacted by email.</li>
+            <li><strong>Timeweb Cloud, Moscow</strong> hosts our API, authentication, managed PostgreSQL database and backups;</li>
+            <li><strong>Selectel Token Factory</strong> runs a DeepSeek model on Selectel infrastructure in Russia. For a reading our API sends the question, reading type and card names; for a paid daily card it sends the date, card and necessary non-personal context. The free daily card uses a prepared local text library without a model request. We do not add email, name or account ID, but a question can contain personal data if you enter it. The release configuration does not call DeepSeek's foreign API directly;</li>
+            <li><strong>REG.RU</strong> delivers confirmation and password-reset emails and hosts the support mailbox;</li>
+            <li><strong>RuStore</strong> processes purchases, subscriptions, renewals, cancellations, refunds and receipts.</li>
           </ul>
-          <p>
-            providers receive only the data required for their function and process
-            it under their own terms and privacy policies.
-          </p>
+          <p>According to Selectel, Token Factory processes requests in Russian data centers, does not retain request/response content and does not train models on it. KSOU FLOW still stores reading history in its own database. This description is specific to Token Factory, not every technical flow of our website.</p>
+          <p>Opening ksouflow.tech connects your browser to the separate public-page host (GitHub Pages) and loads Google Fonts. Those providers may receive your IP address and browser details; app questions and database records are not sent through them.</p>
         </section>
 
         <section>
           <h2>advertising and payments</h2>
           <p>
-            KSOU FLOW contains no advertising and does not use advertising identifiers.
-            The app may offer paid digital features in the future. Applicable terms,
-            prices, payment methods, and refund arrangements will be shown before a
-            purchase and published before payment features are launched.
+            KSOU FLOW contains no advertising. Purchases and subscriptions use <strong>RuStore</strong>.
+            It receives the information needed for payment, renewals and receipts; we do not pass your
+            email in the optional <code>appUserEmail</code> parameter.
+          </p>
+          <p>
+            KSOU FLOW receives the purchase ID, product, amount, status, subscription and refund dates,
+            but does not receive or store full bank-card details.
+            The terms and total amount are shown before payment is confirmed.
           </p>
         </section>
 
         <section>
           <h2>retention and security</h2>
           <p>
-            account data and history are retained while the account is active or as
-            needed to provide requested features. Data is transmitted over secure
-            connections, and server access is restricted through authentication and permissions.
+            Account data, name, questions and history remain while the account exists and these features
+            are needed, and are removed on account deletion subject to the exceptions below. After
+            <strong>24 months</strong> without sign-in or use, we email a warning <strong>30 days</strong>
+            before planned deletion. Returning resets the clock. An active subscription, pending payment
+            or unresolved dispute suspends automatic deletion.
           </p>
-          <p>
-            infrastructure providers may temporarily retain technical logs for
-            security and diagnostics. After account deletion, residual copies in logs
-            and backups may remain until the relevant provider's standard retention
-            cycle completes. We do not sell personal data.
-          </p>
+          <p>Support requests and their REG.RU email copies are deleted six months after the last correspondence unless a dispute is open. Protected markers derived from a normalized email with a secret key remain for up to 12 months after account deletion to prevent repeat welcome or promotional bonuses. Registration again is allowed; the marker can still be personal data.</p>
+          <p>Minimal operational purchase data — purchase ID, product, amount, status, dates and, if needed, a former account identifier — may be kept separately from a deleted profile for reconciliation, refunds and disputes for no more than 24 months after the paid period ends, a refund is completed or a dispute closes (for one-off purchases, after payment). An open dispute or unconfirmed subscription cancellation is reviewed until resolved. Tax and settlement documents that must actually be kept are held in a separate archive for the applicable statutory period; this is not a copy of the profile or the entire in-app purchase history. Automatic cleanup runs at least every 28 days and removes records before their retention deadline. Technical logs and physical backups follow the configured security and backup cycle; deletion from the live database does not immediately erase an existing backup, and restoration must not reactivate a deleted account. App–API traffic uses HTTPS and access is restricted by permissions.</p>
         </section>
 
         <section>
@@ -111,13 +119,13 @@
             or use the <a href="./delete-account-en.html">account deletion page</a>.
           </p>
           <p>
-            deletion removes the account, profile, questions, readings, history, balance,
-            referral data, and requests created inside the app. To prevent repeated signup
-            bonuses, an irreversible email hash and a technical deletion identifier are
-            retained indefinitely without the email address, name, or reading history.
-            Messages sent to the external support mailbox are not deleted automatically;
-            their deletion can be requested separately.
+            After successful deletion, access ends and sessions are revoked. The profile, questions,
+            readings, history and balance are removed. If the operation fails, the app does not present
+            partial deletion as success. You cannot sign back in to the deleted account, and a late
+            purchase or refund notification does not restore the profile. Exceptions for minimal payment
+            records and the 12-month bonus marker are described above.
           </p>
+          <p>With an auto-renewing subscription you may turn off renewal and keep the account and access until the paid period ends, or turn off renewal and delete the account now after a separate warning about losing the remaining access. Deleting the account does not automatically refund a payment. We request cancellation through RuStore and verify its status. If cancellation cannot be confirmed, you may still delete the account in the app after a warning about possible further charges; you can also visit RuStore → Profile → Subscriptions or contact support.</p>
         </section>
 
         <section>
