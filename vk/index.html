@@ -6,14 +6,14 @@
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <title>Авторизация ВКонтакте — KSOU FLOW</title>
     <meta name="description" content="Страница завершения авторизации ВКонтакте для KSOU FLOW." />
-    <meta name="theme-color" content="#140919" />
+    <meta name="theme-color" content="#19070f" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260929-2" />
+    <link rel="stylesheet" href="../styles.css?v=20261119-wine" />
     <style>
       .vk-page {
         min-height: calc(100svh - 116px);
@@ -37,7 +37,7 @@
         padding: 30px;
         border: 1px solid var(--border);
         border-radius: 18px;
-        background: rgba(31, 14, 37, 0.72);
+        background: var(--surface);
       }
 
       .vk-list {
@@ -73,14 +73,14 @@
         border: 1px solid var(--border);
         border-radius: 12px;
         outline: none;
-        background: rgba(14, 6, 18, 0.72);
+        background: var(--bg-soft);
         color: var(--text);
         font: 500 0.86rem/1.4 var(--sans);
         text-overflow: ellipsis;
       }
 
       .vk-value:focus {
-        border-color: rgba(232, 199, 132, 0.45);
+        border-color: var(--gold);
       }
 
       .copy-button {
@@ -96,7 +96,7 @@
       }
 
       .copy-button:hover {
-        border-color: rgba(232, 199, 132, 0.42);
+        border-color: var(--gold);
         color: var(--gold);
         transform: translateY(-1px);
       }
@@ -107,8 +107,8 @@
       }
 
       .copy-button[data-copied="true"] {
-        border-color: rgba(232, 199, 132, 0.5);
-        background: rgba(232, 199, 132, 0.1);
+        border-color: var(--gold);
+        background: rgba(230, 182, 91, 0.1);
         color: var(--gold);
       }
 

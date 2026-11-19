@@ -7,6 +7,8 @@
 - `privacy.html` — политика конфиденциальности
 - `support.html` — поддержка / contact
 - `styles.css` — общий стиль
+- `i/index.html`, `vk/index.html`, `oauth-callback.html` — служебные страницы в той же палитре Wine & Ivory
+- `og-image.png` — социальное превью; исходник для повторной генерации — `assets/og-image-source.html` (1200×630)
 
 ## локальный просмотр
 из папки `site` можно запустить:

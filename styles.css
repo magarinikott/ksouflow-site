@@ -1,15 +1,17 @@
 :root {
-  --bg: #140919;
-  --bg-deep: #0e0612;
-  --bg-soft: #1b0c21;
-  --surface: rgba(44, 22, 51, 0.62);
-  --surface-hover: rgba(53, 27, 61, 0.78);
-  --text: #f6efe6;
-  --text-soft: #c9b9c8;
-  --text-muted: #9e899e;
-  --gold: #e8c784;
-  --gold-soft: #f1dcaa;
-  --border: rgba(232, 199, 132, 0.13);
+  --bg: #19070f;
+  --bg-deep: #12050c;
+  --bg-soft: #1d0d17;
+  --surface: rgba(41, 10, 23, 0.82);
+  --surface-hover: rgba(87, 11, 37, 0.72);
+  --text: #f5e9de;
+  --text-soft: #c5a6bf;
+  --text-muted: #a8849d;
+  --gold: #e6b65b;
+  --gold-soft: #f3e3cb;
+  --cream: #e8cdaa;
+  --text-on-light: #290a17;
+  --border: rgba(113, 54, 76, 0.56);
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", system-ui, sans-serif;
   --container: min(1160px, calc(100vw - 64px));
@@ -23,8 +25,8 @@ body {
   font-family: var(--sans);
   color: var(--text);
   background:
-    radial-gradient(circle at 78% 7%, rgba(104, 52, 117, 0.18), transparent 25%),
-    linear-gradient(180deg, #16091b 0%, var(--bg) 45%, var(--bg-deep) 100%);
+    radial-gradient(circle at 78% 7%, rgba(113, 54, 76, 0.22), transparent 25%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg) 45%, var(--bg-deep) 100%);
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
@@ -44,7 +46,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  border-bottom: 1px solid rgba(232, 199, 132, 0.07);
+  border-bottom: 1px solid var(--border);
 }
 
 .brand {
@@ -129,8 +131,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: 0 23px;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--gold);
-  color: #211225;
+  background: var(--cream);
+  color: var(--text-on-light);
   font-size: 0.76rem;
   font-weight: 700;
   transition: transform 180ms ease, background-color 180ms ease;
@@ -151,29 +153,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-visual { position: relative; display: grid; place-items: center; min-height: 600px; }
 .orbit {
   position: absolute;
-  border: 1px solid rgba(232, 199, 132, 0.11);
+  border: 1px solid rgba(230, 182, 91, 0.14);
   border-radius: 50%;
 }
 .orbit-one { width: 430px; height: 430px; }
-.orbit-two { width: 310px; height: 310px; background: rgba(102, 49, 112, 0.2); border: 0; }
+.orbit-two { width: 310px; height: 310px; background: rgba(87, 11, 37, 0.32); border: 0; }
 .phone-mockup {
   position: relative;
   width: 286px;
   height: 574px;
   padding: 10px;
-  border: 1px solid rgba(246, 239, 230, 0.22);
+  border: 1px solid rgba(243, 227, 203, 0.22);
   border-radius: 42px;
-  background: #0b0610;
+  background: var(--bg-deep);
   box-shadow: 0 34px 100px rgba(0, 0, 0, 0.38);
   z-index: 1;
 }
-.phone-notch { width: 94px; height: 24px; margin: 5px auto -29px; border-radius: 20px; background: #08040c; position: relative; z-index: 2; }
+.phone-notch { width: 94px; height: 24px; margin: 5px auto -29px; border-radius: 20px; background: #0a0307; position: relative; z-index: 2; }
 .phone-screen {
   height: 100%;
   padding: 60px 23px 24px;
   overflow: hidden;
   border-radius: 32px;
-  background: linear-gradient(180deg, #26102c 0%, #170a1c 100%);
+  background: linear-gradient(180deg, #290a17 0%, #19070f 100%);
 }
 .screen-overline { margin: 0 0 14px; color: var(--gold); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.13em; }
 .phone-screen h2 { margin: 0; font-family: var(--serif); font-size: 2rem; font-weight: 500; line-height: 1.02; }
@@ -184,8 +186,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 72px;
   height: 112px;
   border-radius: 13px;
-  background: #f1e7d7;
-  color: #3a1e40;
+  background: var(--gold-soft);
+  color: var(--text-on-light);
   font-family: var(--serif);
   font-size: 1.7rem;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
@@ -195,7 +197,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   padding: 17px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(113, 54, 76, 0.12);
   color: var(--text-soft);
   font-size: 0.72rem;
   line-height: 1.6;
@@ -213,7 +215,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 100vw;
   top: 0;
   transform: translateX(-50%);
-  border-top: 1px solid rgba(232, 199, 132, 0.07);
+  border-top: 1px solid var(--border);
 }
 .section-heading { margin-bottom: 52px; }
 .section-heading h2 { max-width: 800px; font-size: clamp(2.8rem, 4.7vw, 4.8rem); }
@@ -228,7 +230,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .feature-grid article {
   min-height: 220px;
   padding: 30px;
-  background: rgba(28, 12, 34, 0.96);
+  background: rgba(41, 10, 23, 0.96);
   transition: background-color 180ms ease;
 }
 .steps-grid article:hover,
@@ -267,8 +269,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 100%;
   padding: 94px 32px 98px;
   text-align: center;
-  background: linear-gradient(180deg, rgba(38, 16, 45, 0.88), rgba(26, 11, 31, 0.94));
-  border-top: 1px solid rgba(232, 199, 132, 0.08);
+  background: linear-gradient(180deg, rgba(87, 11, 37, 0.36), rgba(29, 13, 23, 0.94));
+  border-top: 1px solid var(--border);
 }
 .launch-symbol { margin-bottom: 24px; color: var(--gold); font-size: 1rem; }
 .launch-note .eyebrow { margin-bottom: 15px; }
@@ -293,10 +295,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .legal-nav a { color: var(--text-soft); }
 .legal-nav a:hover { color: var(--gold); }
 .button-ghost { background: transparent; border-color: var(--border); color: var(--text); }
+.button-ghost:hover { color: var(--text-on-light); }
 .legal-page { width: min(820px, calc(100vw - 48px)); margin: 0 auto; padding: 72px 0 100px; }
 .legal-page h1 { margin-bottom: 24px; font-size: clamp(3.2rem, 7vw, 5.8rem); }
 .legal-page > p { max-width: 700px; }
-.legal-page section { margin-top: 24px; padding: 28px 30px; border: 1px solid var(--border); border-radius: 16px; background: rgba(31, 14, 37, 0.7); }
+.legal-page section { margin-top: 24px; padding: 28px 30px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
 .legal-page h2 { margin: 0 0 14px; font-size: 1.65rem; }
 .legal-page section p { margin: 0 0 14px; }
 .legal-page section p:last-child { margin-bottom: 0; }
@@ -351,6 +354,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .launch-note { padding-inline: 20px; }
   .button { min-height: 48px; }
   .legal-page { width: calc(100vw - 32px); padding-top: 50px; }
+  .legal-page h1 { font-size: clamp(2.4rem, 10vw, 3.2rem); overflow-wrap: anywhere; }
   .legal-page section { padding: 24px 22px; }
 }
 
